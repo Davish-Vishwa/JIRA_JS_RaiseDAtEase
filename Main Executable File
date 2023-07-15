@@ -1,0 +1,275 @@
+// ==UserScript==
+// @name         JIRA_FTV_RaiseDefect@Ease
+// @namespace    http://tampermonkey.net/
+// @version      0.1
+// @description  try to take over the world!
+// @author       Vishwa
+// @match        https://issues.labcollab.net/secure/CreateIssue.jspa
+// @grant        none
+// ==/UserScript==
+
+(function() {
+    'use strict';
+var input=document.createElement("input");
+input.type = "button";
+input.value = "Insert Template";
+input.onclick = Template;
+input.setAttribute("style", "font-size:20px;top:530px;right:450px;color:green;");
+document.body.appendChild(input);
+    function Template()
+    {
+        document.getElementById("description").value = "App version : \nDSN : \nDevice model : \nDevice Specific : \nIs Regression ? \n\nAccount used : \nCID : \n\nTest Case Link: \n\nStep to reproduce: \n1.\n2.\n3.\n4.\n5.\n\nActual: \nExpected: \n\nRepro Rate: \n\nNote: \n1.\n2.\n\nAttached Video/Screenshot and Logs for Reference:";
+    }
+
+var input1=document.createElement("input");
+input1.type = "button";
+input1.value = "Tank";
+input1.onclick = Tank;
+input1.setAttribute("style", "font-size:20px;top:530px;right:550px;color:red;");
+document.body.appendChild(input1);
+    function Tank()
+    {
+        document.querySelector("input[value='17121']").click();
+    }
+
+var input2=document.createElement("input");
+input2.type = "button";
+input2.value = "Mantis";
+input2.onclick = Mantis;
+input2.setAttribute("style", "font-size:20px;top:530px;right:550px;color:red;");
+document.body.appendChild(input2);
+    function Mantis()
+    {
+        document.querySelector("input[value='22000']").click();
+    }
+
+var input3=document.createElement("input");
+input3.type = "button";
+input3.value = "Sheldonp";
+input3.onclick = Sheldonp;
+input3.setAttribute("style", "font-size:20px;top:530px;right:550px;color:red;");
+document.body.appendChild(input3);
+    function Sheldonp()
+    {
+        document.querySelector("input[value='27408']").click();
+    }
+
+var input4=document.createElement("input");
+input4.type = "button";
+input4.value = "Sheldon";
+input4.onclick = Sheldon;
+input4.setAttribute("style", "font-size:20px;top:530px;right:550px;color:red;");
+document.body.appendChild(input4);
+    function Sheldon()
+    {
+        document.querySelector("input[value='27202']").click();
+    }
+
+var input18=document.createElement("input");
+input18.type = "button";
+input18.value = "FTV";
+input18.onclick = FTV;
+input18.setAttribute("style", "font-size:20px;top:530px;right:550px;color:red;");
+document.body.appendChild(input18);
+    function FTV()
+    {
+        document.querySelector("input[value='13401']").click();
+    }
+
+var input5=document.createElement("input");
+input5.type = "button";
+input5.value = "Functionality";
+input5.onclick = Functionality;
+input5.setAttribute("style", "font-size:20px;top:530px;right:550px;color:Black;");
+document.body.appendChild(input5);
+    function Functionality()
+    {
+        document.getElementById("customfield_10210").value = "10227";
+    }
+
+var input6=document.createElement("input");
+input6.type = "button";
+input6.value = "UI/UX";
+input6.onclick = UIUX;
+input6.setAttribute("style", "font-size:20px;top:530px;right:550px;color:Black;");
+document.body.appendChild(input6);
+    function UIUX()
+    {
+        document.getElementById("customfield_10210").value = "10231";
+    }
+
+var input7=document.createElement("input");
+input7.type = "button";
+input7.value = "Accessibility";
+input7.onclick = Accessibility;
+input7.setAttribute("style", "font-size:20px;top:530px;right:550px;color:Black;");
+document.body.appendChild(input7);
+    function Accessibility()
+    {
+        document.getElementById("customfield_10210").value = "10709";
+    }
+
+var input8=document.createElement("input");
+input8.type = "button";
+input8.value = "Once";
+input8.onclick = Once;
+input8.setAttribute("style", "font-size:20px;top:530px;right:550px;color:orange;");
+document.body.appendChild(input8);
+    function Once()
+    {
+        document.getElementById("customfield_10003").value = "10000";
+    }
+
+var input9=document.createElement("input");
+input9.type = "button";
+input9.value = "Sometimes";
+input9.onclick = Sometimes;
+input9.setAttribute("style", "font-size:20px;top:530px;right:550px;color:orange;");
+document.body.appendChild(input9);
+    function Sometimes()
+    {
+        document.getElementById("customfield_10003").value = "10001";
+    }
+
+var input10=document.createElement("input");
+input10.type = "button";
+input10.value = "Always";
+input10.onclick = Always;
+input10.setAttribute("style", "font-size:20px;top:530px;right:550px;color:orange;");
+document.body.appendChild(input10);
+    function Always()
+    {
+        document.getElementById("customfield_10003").value = "10002";
+    }
+
+var input11=document.createElement("input");
+input11.type = "button";
+input11.value = "AssignToMe";
+input11.onclick = AssignToMe;
+input11.setAttribute("style", "font-size:15px;top:530px;right:550px;color:purple;");
+document.body.appendChild(input11);
+    function AssignToMe()
+    {
+        document.getElementById("assign-to-me-trigger").click();
+    }
+
+var input12=document.createElement("input");
+input12.type = "button";
+input12.value = "GDQ_QS_Detected_IMDbTV";
+input12.onclick = GDQ_QS_Detected_IMDbTV;
+input12.setAttribute("style", "font-size:15px;top:530px;right:550px;color:blue;");
+document.body.appendChild(input12);
+    function GDQ_QS_Detected_IMDbTV()
+    {
+        document.getElementById("labels-textarea").value = "GDQ_QS_Detected_IMDbTV";
+        document.getElementById("labels-textarea").click();
+    }
+
+var input13=document.createElement("input");
+input13.type = "button";
+input13.value = "QS_Adhoc";
+input13.onclick = QS_Adhoc;
+input13.setAttribute("style", "font-size:15px;top:530px;right:550px;color:blue;");
+document.body.appendChild(input13);
+    function QS_Adhoc()
+    {
+        document.getElementById("labels-textarea").value = "QS_Adhoc";
+        document.getElementById("labels-textarea").click();
+    }
+
+var input14=document.createElement("input");
+input14.type = "button";
+input14.value = "QS_Testcase";
+input14.onclick = QS_Testcase;
+input14.setAttribute("style", "font-size:15px;top:530px;right:550px;color:blue;");
+document.body.appendChild(input14);
+    function QS_Testcase()
+    {
+        document.getElementById("labels-textarea").value = "QS_Testcase";
+        document.getElementById("labels-textarea").click();
+    }
+
+var input15=document.createElement("input");
+input15.type = "button";
+input15.value = "QS-Regression";
+input15.onclick = QSRegression;
+input15.setAttribute("style", "font-size:15px;top:530px;right:550px;color:blue;");
+document.body.appendChild(input15);
+    function QSRegression()
+    {
+        document.getElementById("labels-textarea").value = "QS-Regression";
+        document.getElementById("labels-textarea").click();
+    }
+
+var input16=document.createElement("input");
+input16.type = "button";
+input16.value = "QS-Newfeature";
+input16.onclick = QSNewfeature;
+input16.setAttribute("style", "font-size:15px;top:530px;right:550px;color:blue;");
+document.body.appendChild(input16);
+    function QSNewfeature()
+    {
+        document.getElementById("labels-textarea").value = "QS-Newfeature";
+        document.getElementById("labels-textarea").click();
+    }
+
+var input17=document.createElement("input");
+input17.type = "button";
+input17.value = "QS_Accessibility";
+input17.onclick = QS_Accessibility;
+input17.setAttribute("style", "font-size:15px;top:530px;right:550px;color:blue;");
+document.body.appendChild(input17);
+    function QS_Accessibility()
+    {
+        document.getElementById("labels-textarea").value = "QS_Accessibility";
+        document.getElementById("labels-textarea").click();
+    }
+
+var input19=document.createElement("input");
+input19.type = "button";
+input19.value = "QS-Clarification";
+input19.onclick = QSClarification;
+input19.setAttribute("style", "font-size:15px;top:530px;right:550px;color:blue;");
+document.body.appendChild(input19);
+    function QSClarification()
+    {
+        document.getElementById("labels-textarea").value = "QS-Clarification";
+        document.getElementById("labels-textarea").click();
+    }
+
+var input20=document.createElement("input");
+input20.type = "button";
+input20.value = "SKIP_AUDIT";
+input20.onclick = SKIPAUDIT;
+input20.setAttribute("style", "font-size:15px;top:530px;right:550px;color:blue;");
+document.body.appendChild(input20);
+    function SKIPAUDIT()
+    {
+        document.getElementById("labels-textarea").value = "SKIP_AUDIT";
+        document.getElementById("labels-textarea").click();
+    }
+
+var input22=document.createElement("input");
+input22.type = "button";
+input22.value = "IsR_Yes";
+input22.onclick = IsRYes;
+input22.setAttribute("style", "font-size:15px;top:530px;right:550px;color:red;");
+document.body.appendChild(input22);
+    function IsRYes()
+    {
+        document.getElementById("customfield_11301").value = "11626";
+    }
+
+var input23=document.createElement("input");
+input23.type = "button";
+input23.value = "IsR_No";
+input23.onclick = IsRNo;
+input23.setAttribute("style", "font-size:15px;top:530px;right:550px;color:red;");
+document.body.appendChild(input23);
+    function IsRNo()
+    {
+        document.getElementById("customfield_11301").value = "11627";
+    }
+
+}
+)();
